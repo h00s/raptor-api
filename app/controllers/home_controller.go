@@ -10,7 +10,7 @@ type HomeController struct {
 
 func (hc *HomeController) Index(c *raptor.Context) error {
 	hc.Services.Log.Info("HomeController.Index")
-	json := map[string]interface{}{
+	json := raptor.Map{
 		"controller": "Home",
 		"action":     "Index",
 	}
@@ -19,7 +19,7 @@ func (hc *HomeController) Index(c *raptor.Context) error {
 
 func (hc *HomeController) Example(c *raptor.Context) error {
 	hc.Services.Log.Info("HomeController.Example")
-	json := map[string]interface{}{
+	json := raptor.Map{
 		"controller": "Home",
 		"action":     "Example",
 	}
