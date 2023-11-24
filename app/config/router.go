@@ -5,8 +5,8 @@ import (
 )
 
 func Routes() raptor.Routes {
-	return []raptor.Route{
-		raptor.NewRoute("GET", "/api/v1/home", "Home", "Index"),
-		raptor.NewRoute("GET", "/api/v1/home/example", "Home", "Example"),
+	return raptor.Routes{
+		raptor.Route("GET", "/api/v1/home", "Home", "Index"),
+		raptor.Route("GET", "/api/v1/home/example", "Home", "Example"),
 	}
 }
