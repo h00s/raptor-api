@@ -5,7 +5,17 @@ import (
 )
 
 type HomeController struct {
-	raptor.DefaultController
+	raptor.Controller
+}
+
+func NewHomeController() *HomeController {
+	hc := &HomeController{}
+	hc.Name = "Home"
+	hc.RegisterActions(
+		raptor.Action("Index", hc.Index),
+		raptor.Action("Example", hc.Example),
+	)
+	return hc
 }
 
 func (hc *HomeController) Index(c *raptor.Context) error {

@@ -10,6 +10,8 @@ func main() {
 		Address: "localhost",
 		Port:    3000,
 	})
-	r.SetRouter(config.Router())
+
+	r.RegisterControllers(config.Controllers())
+	r.RegisterRoutes(config.Routes())
 	r.Start()
 }
