@@ -11,7 +11,8 @@ func main() {
 		Port:    3000,
 	})
 
-	r.RegisterControllers(config.Controllers())
-	r.RegisterRoutes(config.Routes())
-	r.Start()
+	r.Controllers(config.Controllers())
+	r.Routes(config.Routes())
+
+	r.Listen()
 }
