@@ -8,8 +8,8 @@ import (
 func Controllers() raptor.Controllers {
 	hc := &controllers.HomeController{}
 
-	return raptor.NewControllers(
-		raptor.NewController("Home", &hc.Controller,
+	return raptor.RegisterControllers(
+		raptor.RegisterController("Home", &hc.Controller,
 			raptor.Action("Index", hc.Index),
 			raptor.Action("Example", hc.Example),
 		),
