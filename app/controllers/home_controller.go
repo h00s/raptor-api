@@ -8,16 +8,6 @@ type HomeController struct {
 	raptor.Controller
 }
 
-func NewHomeController() *HomeController {
-	hc := &HomeController{}
-	hc.Name = "Home"
-	hc.RegisterActions(
-		raptor.Action("Index", hc.Index),
-		raptor.Action("Example", hc.Example),
-	)
-	return hc
-}
-
 func (hc *HomeController) Index(c *raptor.Context) error {
 	hc.Services.Log.Info("HomeController.Index")
 	json := raptor.Map{
