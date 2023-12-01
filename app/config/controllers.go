@@ -10,8 +10,7 @@ func Controllers() raptor.Controllers {
 
 	return raptor.RegisterControllers(
 		raptor.RegisterController("Home", &hc.Controller,
-			raptor.Action("Index", hc.Index),
-			raptor.Action("Example", hc.Example),
+			raptor.Action("Root", hc.Root),
 		),
 	)
 }
