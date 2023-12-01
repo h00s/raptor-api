@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/h00s/raptor"
 )
 
@@ -23,5 +25,5 @@ func (hc *HomeController) Example(c *raptor.Context) error {
 		"controller": "Home",
 		"action":     "Example",
 	}
-	return c.JSON(json)
+	return c.JSON(json, http.StatusOK)
 }
