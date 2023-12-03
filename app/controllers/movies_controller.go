@@ -10,7 +10,6 @@ type MoviesController struct {
 }
 
 func (mc *MoviesController) Index(c *raptor.Context) error {
-	mc.Services.Log.Info("MoviesController.Index")
 	movies := []models.Movie{
 		{
 			Id:          1,

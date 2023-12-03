@@ -9,7 +9,6 @@ type HomeController struct {
 }
 
 func (hc *HomeController) Root(c *raptor.Context) error {
-	hc.Services.Log.Info("HomeController.Index")
 	json := raptor.Map{
 		"controller": "Home",
 		"action":     "Index",
