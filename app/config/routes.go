@@ -8,5 +8,6 @@ func Routes() raptor.Routes {
 	return raptor.Routes{
 		raptor.Route("GET", "/api/v1", "Home", "Root"),
 		raptor.Route("GET", "/api/v1/movies", "Movies", "Index"),
+		raptor.Route("GET", "/api/v1/movies/:id", "Movies", "Get"),
 	}
 }

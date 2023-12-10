@@ -15,6 +15,7 @@ func Controllers() raptor.Controllers {
 		),
 		raptor.RegisterController("Movies", &mc.Controller,
 			raptor.Action("Index", mc.Index),
+			raptor.Action("Get", mc.Get),
 		),
 	)
 }
