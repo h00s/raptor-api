@@ -2,9 +2,7 @@ module github.com/h00s/raptor-api
 
 go 1.21.4
 
-replace github.com/h00s/raptor => /Users/h00s/Stuff/dev/godev/raptor
-
-require github.com/h00s/raptor v0.0.4
+require github.com/h00s/raptor v0.0.9
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
