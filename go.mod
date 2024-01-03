@@ -4,7 +4,10 @@ go 1.21.4
 
 replace github.com/h00s/raptor => /Users/h00s/Stuff/dev/godev/raptor
 
-require github.com/h00s/raptor v0.0.9
+require (
+	github.com/h00s/raptor v0.0.9
+	golang.org/x/exp v0.0.0-20231226003508-02704c960a9b
+)
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
