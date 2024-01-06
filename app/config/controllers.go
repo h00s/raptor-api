@@ -6,10 +6,10 @@ import (
 )
 
 func Controllers() raptor.Controllers {
-	return raptor.RegisterControllers(
+	return raptor.Controllers{
 		&controllers.HomeController{},
 		&controllers.MoviesController{
 			Ms: Ms,
 		},
-	)
+	}
 }
