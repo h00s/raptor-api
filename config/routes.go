@@ -3,9 +3,11 @@ package config
 import "github.com/h00s/raptor"
 
 func Routes() raptor.Routes {
-	return raptor.Routes{
-		raptor.Route("GET", "/api/v1", "HomeController", "Root"),
-		raptor.Route("GET", "/api/v1/movies", "MoviesController", "Index"),
-		raptor.Route("GET", "/api/v1/movies/:id", "MoviesController", "Get"),
-	}
+	return raptor.CollectRoutes(
+		raptor.Scope("/api/v1",
+			raptor.Route("GET", "/", "HomeController", "Root"),
+			raptor.Route("GET", "/movies", "MoviesController", "Index"),
+			raptor.Route("GET", "/movies/:id", "MoviesController", "Get"),
+		),
+	)
 }
